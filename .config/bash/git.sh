@@ -88,7 +88,7 @@ alias gds='git diff --staged'
 alias gdt='git diff-tree --no-commit-id --name-only -r'
 alias gdw='git diff --word-diff'
 
-gdv() { git diff -w "$@" | view - }
+function gdv() { git diff -w "$@" | view - }
 
 alias gf='git fetch'
 alias gfa='git fetch --all --prune'
@@ -99,16 +99,16 @@ function gfg() { git ls-files | grep $@ }
 alias gg='git gui citool'
 alias gga='git gui citool --amend'
 
-ggf() {
+function ggf() {
   [[ "$#" != 1 ]] && local b="$(git_current_branch)"
   git push --force origin "${b:=$1}"
 }
-ggfl() {
+function ggfl() {
 [[ "$#" != 1 ]] && local b="$(git_current_branch)"
 git push --force-with-lease origin "${b:=$1}"
 }
 
-ggl() {
+function ggl() {
   if [[ "$#" != 0 ]] && [[ "$#" != 1 ]]; then
     git pull origin "${*}"
   else
@@ -117,7 +117,7 @@ ggl() {
   fi
 }
 
-ggp() {
+function ggp() {
   if [[ "$#" != 0 ]] && [[ "$#" != 1 ]]; then
     git push origin "${*}"
   else
@@ -126,7 +126,7 @@ ggp() {
   fi
 }
 
-ggpnp() {
+function ggpnp() {
   if [[ "$#" == 0 ]]; then
     ggl && ggp
   else
@@ -134,7 +134,7 @@ ggpnp() {
   fi
 }
 
-ggu() {
+function ggu() {
   [[ "$#" != 1 ]] && local b="$(git_current_branch)"
   git pull --rebase origin "${b:=$1}"
 }
