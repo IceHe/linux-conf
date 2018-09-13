@@ -11,11 +11,7 @@ plugins=(colored-man copydir copyfile cp git sudo tmux vundle z zsh-syntax-highl
 ## Warning: sudo plugin must be put after vi-mode!
 
 # Editor
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='nvim'
-fi
+export EDITOR='vim'
 
 # PATH
 export PATH="$PATH:/usr/local/sbin"
@@ -53,44 +49,5 @@ zstyle ':completion:incremental:*' completer _complete _correct
 zstyle ':completion:*' completer _complete _prefix _correct _prefix _match _approximate
 zstyle ':completion:*:*:-subscript-:*' tag-order indexes parameters
 
-#########
-# ALIAS #
-#########
-
-# Abbrs
-alias d='docker'
-alias e='exit'
-alias mv='mv -i'
-alias rm='rm -i'
-alias rp='realpath'
-
-# CD ( change directory )
-alias ze='cd /etc'
-alias z.='cd ~/.config'
-alias zh='cd ~/.config/zsh'
-alias zz='cd ~/.oh-my-zsh'
-
-# Source
-source ~/.config/bash/git.sh
-source ~/.config/zsh/git.zsh
-source ~/.config/zsh/ls.zsh
-source ~/.config/zsh/tmux.zsh
-
-# Docker
-alias dps='docker ps'
-alias dst='docker start'
-alias dsp='docker stop'
-alias de='docker exec -it'
-alias drm='docker rm'
-alias drmi='docker rmi'
-
-# Vim
-alias v='vim'
-alias sv='sudo vim'
-alias vim='vim'
-
-alias vgi='v ./.gitignore'
-alias vh='v /etc/hosts'
-alias vv='v ~/.vimrc'
-alias vz='v ~/.zshrc'
-alias vt='v ~/.tmux.conf'
+# Aliases
+source ~/.config/aliases.sh
