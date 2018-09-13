@@ -33,7 +33,7 @@ alias drm='docker rm'
 alias drmi='docker rmi'
 
 # Source
-source ~/.config/bash/git.zsh
+source ~/.config/bash/git.sh
 source ~/.config/zsh/git.zsh
 source ~/.config/zsh/ls.zsh
 source ~/.config/zsh/tmux.zsh
