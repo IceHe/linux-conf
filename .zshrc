@@ -73,9 +73,7 @@ alias zz='cd ~/.oh-my-zsh'
 # Source
 source ~/.config/zsh/fzf.zsh
 source ~/.config/zsh/git.zsh
-source ~/.config/zsh/ip.zsh
 source ~/.config/zsh/ls.zsh
-source ~/.config/zsh/proxy.zsh
 source ~/.config/zsh/tmux.zsh
 
 # Docker
