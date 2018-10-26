@@ -5,9 +5,13 @@ let mapleader = ','
 imap <C-S> <Esc><C-S>a
 map <C-S> :w<CR>
 
+" Paste (about indent)
+set paste
+
 " Search
 " 设置大小写敏感和聪明感知（小写全搜，大写完全匹配）
 set ignorecase
+
 " Swith Tab
 map <S-H> gT
 map <S-L> gt
