@@ -5,9 +5,6 @@ let mapleader = ','
 imap <C-S> <Esc><C-S>a
 map <C-S> :w<CR>
 
-" Paste (about indent)
-set paste
-
 " Search
 " 设置大小写敏感和聪明感知（小写全搜，大写完全匹配）
 set ignorecase
@@ -105,8 +102,6 @@ set encoding=utf-8
 " Undo
 set undofile
 set undodir=~/.vim/undo/
-
-filetype plugin indent on
 
 " Disable Ex-Mode
 noremap Q <Nop>
